@@ -3,8 +3,8 @@ package health
 import (
 	"net/http"
 
+	"github.com/Nevator27/um-help/util/resutil"
 	"github.com/labstack/echo/v4"
-	"github.com/savi2w/nano-go/util/resutil"
 )
 
 type Controller struct {

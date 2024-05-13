@@ -1,10 +1,10 @@
 package middleware
 
 import (
+	"github.com/Nevator27/um-help/config"
+	"github.com/Nevator27/um-help/consts"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
-	"github.com/savi2w/nano-go/config"
-	"github.com/savi2w/nano-go/consts"
 )
 
 func SetMiddlewares(e *echo.Echo, cfg *config.Config) {

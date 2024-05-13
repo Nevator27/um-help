@@ -6,7 +6,7 @@ import (
 	"io"
 	"regexp"
 
-	"github.com/savi2w/nano-go/presenter/req"
+	"github.com/Nevator27/um-help/presenter/req"
 )
 
 func VerifyNewUserRequest(rc io.ReadCloser) (r *req.NewUser, err error) {

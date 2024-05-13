@@ -1,11 +1,11 @@
 package controller
 
 import (
+	"github.com/Nevator27/um-help/server/controller/health"
+	"github.com/Nevator27/um-help/server/controller/user"
+	"github.com/Nevator27/um-help/service"
+	"github.com/Nevator27/um-help/util/resutil"
 	"github.com/rs/zerolog"
-	"github.com/savi2w/nano-go/server/controller/health"
-	"github.com/savi2w/nano-go/server/controller/user"
-	"github.com/savi2w/nano-go/service"
-	"github.com/savi2w/nano-go/util/resutil"
 )
 
 type Controller struct {

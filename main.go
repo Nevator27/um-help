@@ -4,13 +4,13 @@ import (
 	"os"
 	"time"
 
+	"github.com/Nevator27/um-help/config"
+	"github.com/Nevator27/um-help/logger"
+	"github.com/Nevator27/um-help/repo"
+	"github.com/Nevator27/um-help/server"
+	"github.com/Nevator27/um-help/server/controller"
+	"github.com/Nevator27/um-help/service"
 	"github.com/rs/zerolog"
-	"github.com/savi2w/nano-go/config"
-	"github.com/savi2w/nano-go/logger"
-	"github.com/savi2w/nano-go/repo"
-	"github.com/savi2w/nano-go/server"
-	"github.com/savi2w/nano-go/server/controller"
-	"github.com/savi2w/nano-go/service"
 )
 
 func main() {

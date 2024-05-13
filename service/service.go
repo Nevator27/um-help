@@ -1,9 +1,9 @@
 package service
 
 import (
+	"github.com/Nevator27/um-help/config"
+	"github.com/Nevator27/um-help/repo"
 	"github.com/rs/zerolog"
-	"github.com/savi2w/nano-go/config"
-	"github.com/savi2w/nano-go/repo"
 )
 
 type Service struct {

@@ -3,8 +3,8 @@ package logger
 import (
 	"os"
 
+	"github.com/Nevator27/um-help/config"
 	"github.com/rs/zerolog"
-	"github.com/savi2w/nano-go/config"
 )
 
 func New(cfg *config.Config) *zerolog.Logger {

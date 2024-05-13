@@ -3,8 +3,8 @@ package mysql
 import (
 	"context"
 
+	"github.com/Nevator27/um-help/model"
 	"github.com/jmoiron/sqlx"
-	"github.com/savi2w/nano-go/model"
 )
 
 type Currency struct {

@@ -1,9 +1,9 @@
 package repo
 
 import (
-	"github.com/savi2w/nano-go/config"
-	"github.com/savi2w/nano-go/repo/mysql"
-	"github.com/savi2w/nano-go/repo/redis"
+	"github.com/Nevator27/um-help/config"
+	"github.com/Nevator27/um-help/repo/mysql"
+	"github.com/Nevator27/um-help/repo/redis"
 )
 
 type RepoManager struct {

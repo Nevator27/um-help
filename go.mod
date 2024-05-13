@@ -1,4 +1,4 @@
-module github.com/savi2w/nano-go
+module github.com/Nevator27/um-help
 
 go 1.21.0
 

@@ -5,9 +5,9 @@ import (
 	"database/sql"
 	"time"
 
+	"github.com/Nevator27/um-help/config"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
-	"github.com/savi2w/nano-go/config"
 )
 
 type Repo struct {

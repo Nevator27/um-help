@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"sync"
 
+	"github.com/Nevator27/um-help/config"
+	"github.com/Nevator27/um-help/server/controller"
+	"github.com/Nevator27/um-help/server/middleware"
+	"github.com/Nevator27/um-help/server/router"
 	"github.com/labstack/echo/v4"
 	"github.com/rs/zerolog"
-	"github.com/savi2w/nano-go/config"
-	"github.com/savi2w/nano-go/server/controller"
-	"github.com/savi2w/nano-go/server/middleware"
-	"github.com/savi2w/nano-go/server/router"
 )
 
 var (

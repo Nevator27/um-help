@@ -1,9 +1,9 @@
 package router
 
 import (
+	"github.com/Nevator27/um-help/config"
+	"github.com/Nevator27/um-help/server/controller"
 	"github.com/labstack/echo/v4"
-	"github.com/savi2w/nano-go/config"
-	"github.com/savi2w/nano-go/server/controller"
 )
 
 func Register(cfg *config.Config, svr *echo.Echo, ctrl *controller.Controller) {
