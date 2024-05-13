@@ -1,0 +1,23 @@
+services:
+  nano-go-mysql:
+    image: mysql:lts
+    healthcheck:
+      test: mysqladmin ping -proot
+    environment:
+      MYSQL_ROOT_PASSWORD: root # This is just an example, not intended to be a production configuration
+      MYSQL_DATABASE: um_help
+    ports:
+      - "3306:3306"
+    restart: always
+
+  nano-go-redis:
+    image: redis:alpine
+    command:
+      - /bin/sh
+      - -c
+      - redis-server --requirepass "$${REDIS_PASSWORD:?REDIS_PASSWORD variable is not set}"
+    environment:
+      REDIS_PASSWORD: root # This is just an example, not intended to be a production configuration
+    ports:
+      - "6379:6379"
+    restart: always

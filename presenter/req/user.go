@@ -1,7 +1,7 @@
-package presenter_req
+package req
 
-type CreateUserAccount struct {
-	FirstName string `json:"firstName"` //annotation
-	LastName  string `json:"lastName"`
-	TaxID     string `json:"taxId"`
+type NewUser struct {
+	FirstName      string `json:"firstName"`
+	LastName       string `json:"lastName"`
+	DocumentNumber string `json:"documentNumber"`
 }
