@@ -24,6 +24,7 @@ func (r *User) Insert(tx *sqlx.Tx, ctx context.Context, user *model.User) (userI
 		return 0, err
 	}
 
+	//TODO: Retornar public ID
 	userID, err = result.LastInsertId()
 	if err != nil {
 		return 0, err

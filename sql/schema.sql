@@ -8,6 +8,7 @@ DROP TABLE IF EXISTS `um_help`.`tab_user`;
 
 CREATE TABLE IF NOT EXISTS `um_help`.`tab_user` (
   `user_id` BIGINT NOT NULL AUTO_INCREMENT,
+  `public_id` VARCHAR(36) NOT NULL UNIQUE DEFAULT (UUID()),
   `first_name` VARCHAR(45) NOT NULL,
   `last_name` VARCHAR(45) NOT NULL,
   `document_number` VARCHAR(14) NOT NULL UNIQUE,

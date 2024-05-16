@@ -1,12 +1,8 @@
-package user
+package auth
 
 import (
-	"net/http"
-
-	"github.com/Nevator27/um-help/presenter/res"
 	"github.com/Nevator27/um-help/service"
 	"github.com/Nevator27/um-help/util/resutil"
-	"github.com/Nevator27/um-help/validation"
 	"github.com/labstack/echo/v4"
 )
 
@@ -22,8 +18,8 @@ func New(svc *service.Service, resutil *resutil.ResUtil) *Controller {
 	}
 }
 
-func (ctrl *Controller) HandleNewUser(ctx echo.Context) error {
-	req, err := validation.VerifyNewUserRequest(ctx.Request().Body)
+func (ctrl *Controller) HandleLogin(ctx echo.Context) error {
+	/*req, err := validation.VerifyNewUserRequest(ctx.Request().Body)
 	if err != nil {
 		return ctx.JSON(ctrl.resutil.Wrap(nil, err, http.StatusBadRequest))
 	}
@@ -34,8 +30,10 @@ func (ctrl *Controller) HandleNewUser(ctx echo.Context) error {
 	}
 
 	res := &res.User{
-		PublicID: user.PublicId,
-	}
+		ID: user.ID,
+	}*/
 
-	return ctx.JSON(ctrl.resutil.Wrap(res, nil, http.StatusCreated))
+	//return ctx.JSON(ctrl.resutil.Wrap(res, nil, http.StatusCreated))
+
+	return ctx.JSON(ctrl.resutil.Wrap(nil, nil, 200))
 }
