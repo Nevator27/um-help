@@ -1,8 +1,11 @@
 package auth
 
 import (
+	"net/http"
+
 	"github.com/Nevator27/um-help/service"
 	"github.com/Nevator27/um-help/util/resutil"
+	"github.com/Nevator27/um-help/validation"
 	"github.com/labstack/echo/v4"
 )
 
@@ -19,21 +22,15 @@ func New(svc *service.Service, resutil *resutil.ResUtil) *Controller {
 }
 
 func (ctrl *Controller) HandleLogin(ctx echo.Context) error {
-	/*req, err := validation.VerifyNewUserRequest(ctx.Request().Body)
+	req, err := validation.VerifyLoginRequest(ctx.Request().Body)
 	if err != nil {
 		return ctx.JSON(ctrl.resutil.Wrap(nil, err, http.StatusBadRequest))
 	}
 
-	user, err := ctrl.svc.User.New(ctx.Request().Context(), req)
+	resp, err := ctrl.svc.Auth.Login(ctx.Request().Context(), req)
 	if err != nil {
-		return ctx.JSON(ctrl.resutil.Wrap(nil, err, http.StatusInternalServerError))
+		return ctx.JSON(ctrl.resutil.Wrap(nil, err, http.StatusUnauthorized))
 	}
 
-	res := &res.User{
-		ID: user.ID,
-	}*/
-
-	//return ctx.JSON(ctrl.resutil.Wrap(res, nil, http.StatusCreated))
-
-	return ctx.JSON(ctrl.resutil.Wrap(nil, nil, 200))
+	return ctx.JSON(ctrl.resutil.Wrap(resp, nil, http.StatusOK))
 }

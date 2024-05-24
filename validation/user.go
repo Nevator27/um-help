@@ -37,6 +37,10 @@ func VerifyNewUserRequest(rc io.ReadCloser) (r *req.NewUser, err error) {
 		return nil, errors.New("last name too long, please keep it at under 40 characters")
 	}
 
+	if len(r.Password) < 8 {
+		return nil, errors.New("password too short, please type at least 8 characters")
+	}
+
 	re := regexp.MustCompile(`^[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}$`)
 	if !re.MatchString(r.DocumentNumber) {
 		return nil, errors.New("document number invalid, please type 14 characters in the format 123.456.789-00")
